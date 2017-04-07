@@ -11,7 +11,7 @@ const app = express();
 var devMode = app.get('env') === 'development';
 
 const server = http.createServer(app);
-const wss = new WebSocket.Server({ server });
+const wss = new WebSocket.Server({ server, port: 3001 });
 
 // Have the server serve the dist / production version or the development version
 var rootFolder = devMode? '.' : 'dist';
@@ -24,13 +24,20 @@ app.get('/*', function(req, res) {
 });
 
 wss.on('connection', function connection(ws) {
-  const location = url.parse(ws.upgradeReq.url, true);
   console.log('connection');
   ws.on('message', function incoming(message) {
     console.log('received: %s', message);
   });
   ws.send('something');
 });
+
+wss.broadcast = function broadcast(data) {
+  wss.clients.forEach(function each(client) {
+    if (client.readyState === WebSocket.OPEN) {
+      client.send(data);
+    }
+  });
+};
 
 const listener = app.listen(process.env.PORT|3000, function () {
   console.log('Example app listening on ', listener.address().port);
@@ -43,14 +50,16 @@ board.on("ready", function() {
     pin: 7
   });
 
-  // proximity.on("data", function() {
-  //   console.log("Proximity: ");
-  //   console.log("  cm  : ", this.cm);
-  //   console.log("  in  : ", this.in);
-  //   console.log("-----------------");
-  // });
-  //
-  // proximity.on("change", function() {
-  //   console.log("The obstruction has moved.");
-  // });
+  proximity.on("data", function() {
+    // console.log("Proximity: ");
+    // console.log("  cm  : ", this.cm);
+    // console.log("  in  : ", this.in);
+    // console.log("-----------------");
+
+    wss.broadcast(this.cm);
+  });
+
+  proximity.on("change", function() {
+    console.log("The obstruction has moved.");
+  });
 });

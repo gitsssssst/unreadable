@@ -9,9 +9,11 @@
 
         <script type="text/javascript">
             var host = window.document.location.host.replace(/:.*/, '');
-            var ws = new WebSocket('ws://' + host + ':3000');
+            var ws = new WebSocket('ws://localhost:3001');
             ws.onmessage = function (event) {
                 console.log(event.data);
+
+                document.getElementById("waarde").innerHTML=event.data;
             };
         </script>
 
@@ -22,7 +24,7 @@
 
         <div>
             <h2>Afstand</h2>
-            <span class="waarde">0</span> <span>cm</span>
+            <span id="waarde">0</span> <span>cm</span>
         </div>
 
     </body>
