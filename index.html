@@ -13,13 +13,16 @@
             ws.onmessage = function (event) {
                 updateScale(event.data);
             };
-            document.addEventListener('mousemove', function(event) {
-                var perc = event.pageX/document.body.clientWidth;
+            document.addEventListener('mousemove', handleMove);
+            document.addEventListener('touchmove', handleMove);
+            function handleMove(event) {
+                var x = event.touches? event.touches[0].pageX : event.pageX;
+                var perc = x/document.body.clientWidth;
                 var baseDistance = 5;
                 var maxDistance = 250;
                 var distance = baseDistance+perc*(maxDistance-baseDistance);
                 updateScale(distance);
-            });
+            };
             function updateScale(distance) {
                 var scale = (distance/100)*1.5;
                 document.getElementById("square").style.transform = 'scale(' + scale + ')';
