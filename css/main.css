@@ -1,6 +1,9 @@
 html, body {
     background-color: black;
     overflow: hidden;
+    font-family: 'smesmifregular', sans-serif;
+
+    font-size: 16px;
 }
 
 #square {
@@ -18,10 +21,11 @@ html, body {
 
 #logo {
     position: absolute;
-    top: 70px;
-    left: 70px;
-    width: 180px;
-    height: 180px;
+    top: 20px;
+    left: 50%;
+    margin-left: -110px;
+    width: 220px;
+    height: 220px;
     z-index: 10;
 }
 
@@ -47,6 +51,7 @@ html, body {
     position: absolute;
     width: 100%;
     bottom: 50px;
+    font-size: 40px;
 }
 
 @-webkit-keyframes rotating /* Safari and Chrome */ {
@@ -66,4 +71,26 @@ html, body {
   }
 }
 
+@font-face {
+    font-family: 'smesmifregular'; // Faux Monospace
+    src: url('../fonts/smesmif-regular-webfont.eot');
+    src: url('../fonts/smesmif-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/smesmif-regular-webfont.woff2') format('woff2'),
+         url('../fonts/smesmif-regular-webfont.woff') format('woff'),
+         url('../fonts/smesmif-regular-webfont.ttf') format('truetype'),
+         url('../fonts/smesmif-regular-webfont.svg#smesmifregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'smesbook'; // Book / Regular
+    src: url('../fonts/smes-book-webfont.eot');
+    src: url('../fonts/smes-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/smes-book-webfont.woff2') format('woff2'),
+         url('../fonts/smes-book-webfont.woff') format('woff'),
+         url('../fonts/smes-book-webfont.ttf') format('truetype'),
+         url('../fonts/smes-book-webfont.svg#smesbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
