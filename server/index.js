@@ -50,16 +50,16 @@ board.on("ready", function() {
     pin: 7
   });
 
-  proximity.on("data", function() {
-    // console.log("Proximity: ");
-    // console.log("  cm  : ", this.cm);
-    // console.log("  in  : ", this.in);
-    // console.log("-----------------");
+  // proximity.on("data", function() {
+  //   // console.log("Proximity: ");
+  //   // console.log("  cm  : ", this.cm);
+  //   // console.log("  in  : ", this.in);
+  //   // console.log("-----------------");
 
-    wss.broadcast(this.cm);
-  });
+  //   wss.broadcast(this.cm);
+  // });
 
   proximity.on("change", function() {
-    console.log("The obstruction has moved.");
+    wss.broadcast(this.cm);
   });
 });
