@@ -11,13 +11,7 @@
             var host = window.document.location.host.replace(/:.*/, '');
             var ws = new WebSocket('ws://' + host + ':3000');
             ws.onmessage = function (event) {
-                console.log('Event: '+event.data);
-                console.log('Calculated: '+event.data/100);
-
-                // document.getElementById("waarde").innerHTML=event.data;
-
                 document.getElementById("square").style.transform = 'scale(' + (event.data/100)*1.5 +')';
-                // document.getElementById("square").style.height = Math.ceil(event.data)*2 + 'px';
             };
         </script>
 
@@ -31,5 +25,11 @@
 
         <div id="square"></div>
 
+        <div id="footer">
+            <div>sssssst</div>
+            <div>po@sssss.st</div>
+            <div>https://sssss.st</div>
+
+        </div>
     </body>
 </html>
