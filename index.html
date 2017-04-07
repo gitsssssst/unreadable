@@ -11,9 +11,6 @@
             var host = window.document.location.host.replace(/:.*/, '');
             var ws = new WebSocket('ws://' + host + ':3000');
             ws.onmessage = function (event) {
-                // console.log('Event: '+event.data);
-                // console.log('Calculated: '+event.data/100);
-                // console.log('event.data: ', event.data);
                 updateScale(event.data);
             };
             document.addEventListener('mousemove', function(event) {
@@ -31,12 +28,19 @@
 
     </head>
     <body>
-<!--
-        <div>
-            <span id="waarde">0</span> <span>cm</span>
-        </div> -->
 
-        <div id="square"></div>
+        <div id="logo">
+            <img id="logo-circle" src="img/logo-circle.svg">
+            <img id="logo-sssssst" src="img/logo-sssssst.svg">
+        </div>
 
+        <div id="square"><img src="img/white-line-girl.svg" /></div>
+
+        <div id="footer">
+            <div>sssssst</div>
+            <div>po@sssss.st</div>
+            <div>https://sssss.st</div>
+
+        </div>
     </body>
 </html>
