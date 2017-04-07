@@ -32,7 +32,7 @@ wss.on('connection', function connection(ws) {
   ws.send('something');
 });
 
-const listener = app.listen(process.env.PORT|3000, function () {
+const listener = server.listen(process.env.PORT|3000, function () {
   console.log('Example app listening on ', listener.address().port);
 });
 
