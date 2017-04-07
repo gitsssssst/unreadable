@@ -11,21 +11,24 @@
             var host = window.document.location.host.replace(/:.*/, '');
             var ws = new WebSocket('ws://' + host + ':3000');
             ws.onmessage = function (event) {
-                console.log(event.data);
+                console.log('Event: '+event.data);
+                console.log('Calculated: '+event.data/100);
 
-                document.getElementById("waarde").innerHTML=event.data;
+                // document.getElementById("waarde").innerHTML=event.data;
+
+                document.getElementById("square").style.transform = 'scale(' + (event.data/100)*1.5 +')';
+                // document.getElementById("square").style.height = Math.ceil(event.data)*2 + 'px';
             };
         </script>
 
     </head>
     <body>
-
-        <h1>sssssst</h1>
-
+<!--
         <div>
-            <h2>Afstand</h2>
             <span id="waarde">0</span> <span>cm</span>
-        </div>
+        </div> -->
+
+        <div id="square"></div>
 
     </body>
 </html>
