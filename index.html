@@ -11,14 +11,22 @@
             var host = window.document.location.host.replace(/:.*/, '');
             var ws = new WebSocket('ws://' + host + ':3000');
             ws.onmessage = function (event) {
-                console.log('Event: '+event.data);
-                console.log('Calculated: '+event.data/100);
-
-                // document.getElementById("waarde").innerHTML=event.data;
-
-                document.getElementById("square").style.transform = 'scale(' + (event.data/100)*1.5 +')';
-                // document.getElementById("square").style.height = Math.ceil(event.data)*2 + 'px';
+                // console.log('Event: '+event.data);
+                // console.log('Calculated: '+event.data/100);
+                // console.log('event.data: ', event.data);
+                updateScale(event.data);
             };
+            document.addEventListener('mousemove', function(event) {
+                var perc = event.pageX/document.body.clientWidth;
+                var baseDistance = 5;
+                var maxDistance = 250;
+                var distance = baseDistance+perc*(maxDistance-baseDistance);
+                updateScale(distance);
+            });
+            function updateScale(distance) {
+                var scale = (distance/100)*1.5;
+                document.getElementById("square").style.transform = 'scale(' + scale + ')';
+            }
         </script>
 
     </head>
