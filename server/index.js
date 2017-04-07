@@ -24,7 +24,7 @@ app.get('/*', function(req, res) {
 });
 
 wss.on('connection', function connection(ws) {
-  const location = url.parse(ws.upgradeReq.url, true);
+  // const location = url.parse(ws.upgradeReq.url, true);
   console.log('connection');
   ws.on('message', function incoming(message) {
     console.log('received: %s', message);
