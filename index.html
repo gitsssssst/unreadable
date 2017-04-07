@@ -24,12 +24,8 @@
                 updateScale(distance);
             };
             function updateScale(distance) {
-                var scale = (distance/100)*0.5;
+                var scale = (distance/100);
                 document.getElementById("square").style.transform = 'scale(' + scale + ')';
-                
-                // var topmargin = 150 - (distance/10);
-                // 
-                // document.getElementById("square").style.marginTop = -topmargin + '%';
             }
         </script>
 
