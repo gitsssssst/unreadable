@@ -11,13 +11,20 @@ html, body {
 
 #square {
     position: fixed;
-    display: table;
-    top: 180px;
-    left: -1540px;
-    width: 4200px;
-    height: 4200px;
+    /*display: table;*/
+    /*top: -2%;
+    left: -25%;*/
+    top: 50%;
+    left: 50%;
+    width: 500%;
+    height: 300%;
+    /*height: 500%;*/
+    margin-left: -250%;
+    margin-top: -150%;
     transform: scale(1);
     transition: transform 0.3s;
+    
+    
 }
 
 #logo {
