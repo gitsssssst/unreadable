@@ -1,0 +1,27 @@
+{
+  "name": "unreadable",
+  "version": "1.0.0",
+  "description": "The window at the sssssstudio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitsssssst/unreadable.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gitsssssst/unreadable/issues"
+  },
+  "homepage": "https://github.com/gitsssssst/unreadable#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "johnny-five": "^0.10.7",
+    "ws": "^2.2.3"
+  },
+  "devDependencies": {
+    "nodebots-interchange": "^1.1.6"
+  }
+}
