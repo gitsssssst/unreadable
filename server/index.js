@@ -11,7 +11,7 @@ const app = express();
 var devMode = app.get('env') === 'development';
 
 const server = http.createServer(app);
-const wss = new WebSocket.Server({ server, port: 3001 });
+const wss = new WebSocket.Server({ server });
 
 // Have the server serve the dist / production version or the development version
 var rootFolder = devMode? '.' : 'dist';
