@@ -39,7 +39,7 @@ wss.broadcast = function broadcast(data) {
   });
 };
 
-const listener = app.listen(process.env.PORT|3000, function () {
+const listener = server.listen(process.env.PORT|3000, function () {
   console.log('Example app listening on ', listener.address().port);
 });
 
