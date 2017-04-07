@@ -6,6 +6,15 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+
+        <script type="text/javascript">
+            var host = window.document.location.host.replace(/:.*/, '');
+            var ws = new WebSocket('ws://' + host + ':3000');
+            ws.onmessage = function (event) {
+                console.log(event.data);
+            };
+        </script>
+
     </head>
     <body>
 
@@ -16,6 +25,5 @@
             <span class="waarde">0</span> <span>cm</span>
         </div>
 
-        <script src="js/main.js"></script>
     </body>
 </html>
