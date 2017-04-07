@@ -18,7 +18,8 @@
   "homepage": "https://github.com/gitsssssst/unreadable#readme",
   "dependencies": {
     "express": "^4.15.2",
-    "johnny-five": "^0.10.7"
+    "johnny-five": "^0.10.7",
+    "ws": "^2.2.3"
   },
   "devDependencies": {
     "nodebots-interchange": "^1.1.6"

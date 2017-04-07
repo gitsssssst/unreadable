@@ -1,12 +1,17 @@
-var five = require("johnny-five");
-var board = new five.Board();
-var path = require('path');
-var express = require('express');
+const five = require("johnny-five");
+const board = new five.Board();
+const path = require('path');
+const express = require('express');
+const http = require('http');
+const WebSocket = require('ws');
 
 const app = express();
 
 // check NODE_ENV environment variable
 var devMode = app.get('env') === 'development';
+
+const server = http.createServer(app);
+const wss = new WebSocket.Server({ server });
 
 // Have the server serve the dist / production version or the development version
 var rootFolder = devMode? '.' : 'dist';
@@ -16,6 +21,14 @@ app.use(express.static(rootFolder));
 const indexPath = path.join(__dirname, `../${devMode? '' : 'dist/'}index.html`);
 app.get('/*', function(req, res) {
   res.sendFile(indexPath);
+});
+
+wss.on('connection', function connection(ws) {
+  console.log('connection');
+  ws.on('message', function incoming(message) {
+    console.log('received: %s', message);
+  });
+  ws.send('something');
 });
 
 const listener = app.listen(process.env.PORT|3000, function () {
