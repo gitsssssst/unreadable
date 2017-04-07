@@ -8,17 +8,13 @@ html, body {
 }
 
 #square {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    /*background: transparent url('../img/white-line-girl.svg') no-repeat;*/
-    /*background-size: contain;*/
-    width: 300%;
-    height: 300%;
-    margin-left: -100%;
-    margin-top: -100%;
-    /*transform: scale(1) translate(50%);*/
-    transform: translate(-50%, -50%);
+    position: fixed;
+    display: table;
+    top: 180px;
+    left: -1540px;
+    width: 4200px;
+    height: 4200px;
+    transform: scale(1);
     transition: transform 0.3s;
 }
 
