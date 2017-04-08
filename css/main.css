@@ -13,10 +13,10 @@ html, body {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 8000px;
-    height: 5500px;
-    margin-left: -4000px;
-    margin-top: -2700px;
+    width: 6000px;
+    height: 4000px;
+    margin-left: -3000px;
+    margin-top: -1960px;
     
     transform: scale(1);
     transition: transform 0.3s;
