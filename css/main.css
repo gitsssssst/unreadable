@@ -16,7 +16,7 @@ html, body {
     width: 4000px;
     height: 3000px;
     margin-left: -2000px;
-    margin-top: -1400px;
+    margin-top: -1440px;
     
     transform: scale(1);
     transition: transform 0.3s;
