@@ -13,10 +13,16 @@ html, body {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 6000px;
-    height: 4000px;
-    margin-left: -3000px;
-    margin-top: -1960px;
+    width: 12000px;
+    height: 3000px;
+    margin-left: -6000px;
+    margin-top: -1500px;
+    
+    font-size: 3000px;
+    line-height: 3000px;
+    color: #fff;
+    text-align: center;
+    opacity: 0.9;
     
     transform: scale(1);
     transition: transform 0.3s;
