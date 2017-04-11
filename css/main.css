@@ -17,13 +17,9 @@ html, body {
     height: 2000px;
     margin-left: -4000px;
     margin-top: -1000px;
-    
-    font-size: 2000px;
-    line-height: 2000px;
-    color: #fff;
-    text-align: center;
-    opacity: 0.9;
-    
+
+    background: transparent url('../img/sssssst-bad.jpg') no-repeat center center;
+
     transform: scale(1);
     transition: transform 0.3s;
 }
