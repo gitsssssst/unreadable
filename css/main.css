@@ -13,13 +13,13 @@ html, body {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 12000px;
-    height: 3000px;
-    margin-left: -6000px;
-    margin-top: -1500px;
+    width: 8000px;
+    height: 2000px;
+    margin-left: -4000px;
+    margin-top: -1000px;
     
-    font-size: 3000px;
-    line-height: 3000px;
+    font-size: 2000px;
+    line-height: 2000px;
     color: #fff;
     text-align: center;
     opacity: 0.9;
