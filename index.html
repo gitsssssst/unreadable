@@ -43,7 +43,28 @@
             <div>sssssst</div>
             <div>po@sssss.st</div>
             <div>https://sssss.st</div>
-
         </div>
+
+        <div id="status"></div>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.4/socket.io.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')</script>
+        <script type="text/javascript">
+         var socket = io('https://woi.sssss.st');
+          socket.on('presenceStatus', function (data) {
+            Object.keys(data).forEach(function(key,index) {
+                $("#status").append('<div id="' + data[index][0].user + '" class="user ' + data[index][0].status + '">' + data[index][0].user + '</div>');
+            });
+          });
+          socket.on('presenceChange', function (data) {
+            if($('#' + data.name).hasClass("entered") && data.status == "exited") {
+                $('#' + data.name).removeClass("entered").addClass("exited");
+            }
+            if($('#' + data.name).hasClass("exited") && data.status == "entered") {
+                $('#' + data.name).removeClass("exited").addClass("entered");
+            }
+          });
+        </script>
     </body>
 </html>

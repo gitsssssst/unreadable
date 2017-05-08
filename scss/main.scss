@@ -1,0 +1,140 @@
+/**
+ * Main css
+ */
+
+$green: #00FF28;
+$red: #FF000A;
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+    background-color: white;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'smesmifregular', sans-serif;
+    font-size: 16px;
+}
+
+#square {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 8000px;
+    height: 2000px;
+    margin-left: -4000px;
+    margin-top: -1000px;
+
+    background: transparent url('../img/sssssst-bad.jpg') no-repeat center center;
+
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+
+#logo {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    margin-left: -110px;
+    width: 220px;
+    height: 220px;
+    z-index: 10;
+}
+
+#logo-circle,
+#logo-sssssst {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#logo-circle {
+/*  -webkit-animation: rotating 2s linear infinite;
+*/  animation: rotating 60s linear infinite;
+}
+
+/*#logo-sssssst {
+    margin: 20px 50px 20px 20px;
+}*/
+
+#footer {
+    color: black;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 110px;
+    font-size: 40px;
+}
+
+#status {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+
+  .user {
+    width: 50%;
+    float: left;
+    padding: 5px;
+    transition: background-color 0.2s ease-in;
+
+    &.entered {
+      background-color: $green;
+    }
+    &.exited {
+      background-color: $red;
+    }
+  }
+}
+
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@font-face {
+    font-family: 'smesmifregular'; // Faux Monospace
+    src: url('../fonts/smesmif-regular-webfont.eot');
+    src: url('../fonts/smesmif-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/smesmif-regular-webfont.woff2') format('woff2'),
+         url('../fonts/smesmif-regular-webfont.woff') format('woff'),
+         url('../fonts/smesmif-regular-webfont.ttf') format('truetype'),
+         url('../fonts/smesmif-regular-webfont.svg#smesmifregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'smesbook'; // Book / Regular
+    src: url('../fonts/smes-book-webfont.eot');
+    src: url('../fonts/smes-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/smes-book-webfont.woff2') format('woff2'),
+         url('../fonts/smes-book-webfont.woff') format('woff'),
+         url('../fonts/smes-book-webfont.ttf') format('truetype'),
+         url('../fonts/smes-book-webfont.svg#smesbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

@@ -1,12 +1,3 @@
-/**
- * Main css
- */
-html {
-  box-sizing: border-box; }
-
-*, *:before, *:after {
-  box-sizing: inherit; }
-
 html, body {
   background-color: white;
   overflow: hidden;
@@ -26,8 +17,12 @@ html, body {
   margin-left: -4000px;
   margin-top: -1000px;
   background: transparent url("../img/sssssst-bad.jpg") no-repeat center center;
-  transform: scale(1);
-  transition: transform 0.3s; }
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s; }
 
 #logo {
   position: absolute;
@@ -49,7 +44,8 @@ html, body {
 #logo-circle {
   /*  -webkit-animation: rotating 2s linear infinite;
 */
-  animation: rotating 60s linear infinite; }
+  -webkit-animation: rotating 60s linear infinite;
+          animation: rotating 60s linear infinite; }
 
 /*#logo-sssssst {
     margin: 20px 50px 20px 20px;
@@ -67,28 +63,24 @@ html, body {
   bottom: 0px;
   left: 0px;
   width: 100%;
-  text-align: center; }
-  #status .user {
-    width: 50%;
-    float: left;
-    padding: 5px;
-    transition: background-color 0.2s ease-in; }
-    #status .user.entered {
-      background-color: #00FF28; }
-    #status .user.exited {
-      background-color: #FF000A; }
+  height: 50px;
+  background-color: black; }
 
 @-webkit-keyframes rotating /* Safari and Chrome */ {
   from {
-    transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
   to {
-    transform: rotate(360deg); } }
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 
 @keyframes rotating {
   from {
-    transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
   to {
-    transform: rotate(360deg); } }
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 
 @font-face {
   font-family: 'smesmifregular';
