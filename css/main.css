@@ -58,33 +58,45 @@ html, body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  width: 200px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+  background: transparent url(../img/logo-circle-bordered.png) no-repeat center center;
+  background-size: cover; }
 
-.circle:nth-of-type(2) img {
+.circle:nth-of-type(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 400px;
-  height: auto;
+  height: 400px;
+  transform: translate(-50%, -50%);
   animation: rotating-ccw 60s linear infinite; }
 
-.circle:nth-of-type(3) img {
+.circle:nth-of-type(3) {
   width: 550px;
-  height: auto;
+  height: 550px;
   animation: rotating 60s linear infinite; }
 
-.circle:nth-of-type(4) img {
+.circle:nth-of-type(4) {
   width: 750px;
-  height: auto; }
+  height: 750px;
+  animation: rotating-ccw 60s linear infinite; }
 
-.circle:nth-of-type(5) img {
+.circle:nth-of-type(5) {
   width: 1000px;
-  height: auto; }
+  height: 1000px;
+  animation: rotating 60s linear infinite; }
 
-.circle:nth-of-type(6) img {
+.circle:nth-of-type(6) {
   width: 1300px;
-  height: auto; }
+  height: 1300px;
+  animation: rotating-ccw 60s linear infinite; }
 
-.circle:nth-of-type(7) img {
+.circle:nth-of-type(7) {
   width: 1680px;
-  height: auto; }
+  height: 1680px;
+  animation: rotating 60s linear infinite; }
 
 #footer {
   color: black;
