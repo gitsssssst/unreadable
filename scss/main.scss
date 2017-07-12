@@ -6,7 +6,7 @@ $green: #00FF28;
 $red: #FF000A;
 $darkblue: #000028;
 
-$animationLength: 300s;
+$animationLength: 400s;
 
 @mixin circleSize($width: 200px, $animationDirection: rotating) {
   width: $width;
@@ -15,6 +15,7 @@ $animationLength: 300s;
   margin-top: -$width/2;
   // transform: translate(-50%, -50%);
   animation: $animationDirection $animationLength linear infinite;
+  transform: transale3d(0,0,0);
 }
 
 html {
