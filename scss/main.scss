@@ -6,7 +6,7 @@ $green: #00FF28;
 $red: #FF000A;
 $darkblue: #000028;
 
-$animationLength: 600s;
+$animationLength: 300s;
 
 @mixin circleSize($width: 200px, $animationDirection: rotating) {
   width: $width;
@@ -71,7 +71,8 @@ html, body {
 
 #logo-circle {
 /*  -webkit-animation: rotating 2s linear infinite;
-*/  animation: rotating $animationLength linear infinite;
+*/
+  // animation: rotating $animationLength linear infinite;
 }
 
 /*#logo-sssssst {

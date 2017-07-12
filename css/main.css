@@ -48,8 +48,7 @@ html, body {
 
 #logo-circle {
   /*  -webkit-animation: rotating 2s linear infinite;
-*/
-  animation: rotating 600s linear infinite; }
+*/ }
 
 /*#logo-sssssst {
     margin: 20px 50px 20px 20px;
@@ -77,42 +76,42 @@ html, body {
   height: 470px;
   margin-left: -235px;
   margin-top: -235px;
-  animation: rotating-ccw 600s linear infinite; }
+  animation: rotating-ccw 300s linear infinite; }
 
 .circle:nth-of-type(2) .circle-bg {
   width: 705px;
   height: 705px;
   margin-left: -352.5px;
   margin-top: -352.5px;
-  animation: rotating 600s linear infinite; }
+  animation: rotating 300s linear infinite; }
 
 .circle:nth-of-type(3) .circle-bg {
   width: 1056px;
   height: 1056px;
   margin-left: -528px;
   margin-top: -528px;
-  animation: rotating-ccw 600s linear infinite; }
+  animation: rotating-ccw 300s linear infinite; }
 
 .circle:nth-of-type(4) .circle-bg {
   width: 1584px;
   height: 1584px;
   margin-left: -792px;
   margin-top: -792px;
-  animation: rotating 600s linear infinite; }
+  animation: rotating 300s linear infinite; }
 
 .circle:nth-of-type(5) .circle-bg {
   width: 1360px;
   height: 1360px;
   margin-left: -680px;
   margin-top: -680px;
-  animation: rotating-ccw 600s linear infinite; }
+  animation: rotating-ccw 300s linear infinite; }
 
 .circle:nth-of-type(6) .circle-bg {
   width: 1780px;
   height: 1780px;
   margin-left: -890px;
   margin-top: -890px;
-  animation: rotating 600s linear infinite; }
+  animation: rotating 300s linear infinite; }
 
 #footer {
   color: black;
