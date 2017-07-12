@@ -66,8 +66,10 @@
             }
           });
 
-          var circleBg = document.getElementsByClassName("circle-bg");
-          TweenMax.to(circleBg, 60, {rotation:360, repeat:-1});
+          var animTime = 1200;
+          // var circleBg = document.getElementsByClassName("circle-bg");
+          TweenMax.to($('.circle-bg:even'), animTime, {rotation:-360, repeat:-1});
+          TweenMax.to($('.circle-bg:odd, #logo-circle'), animTime, {rotation:360, repeat:-1});
         </script>
     </body>
 </html>
