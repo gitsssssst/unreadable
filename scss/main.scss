@@ -82,10 +82,16 @@ html, body {
 
 #circles {
   position: relative;
-  transform: translate(-50%, -50%);
   top: 50%;
-  transform: scale(1);
+  left: 50%;
+  margin-top: -1500px;
+  margin-left: -1500px;
+  width: 3000px;
+  height: 3000px;
+  transform: scale(1) transale3d(0,0,0);
   transition: transform 1s;
+  background: transparent url(../img/circle-background.png) no-repeat center center;
+  // background-size: cover;
 }
 
 .circle {

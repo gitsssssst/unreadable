@@ -28,11 +28,12 @@
 
                 // console.log(distance);
 
-                if(distance <= 105) {
-                    distance = 105;
-                } else if (distance >= 240) {
-                    distance = 240;
+                if(distance <= 53) {
+                    distance = 53;
                 }
+                // else if (distance >= 240) {
+                //     distance = 240;
+                // }
 
                 var scale = (distance/250)*1.5;
                 document.getElementById("circles").style.transform = 'scale(' + scale + ')';
@@ -49,10 +50,10 @@
             <img id="logo-sssssst" src="img/logo-sssssst.svg">
         </div>
         <div id="circles">
+<!--             <div class="circle"><div class="circle-bg"></div></div>
             <div class="circle"><div class="circle-bg"></div></div>
             <div class="circle"><div class="circle-bg"></div></div>
-            <div class="circle"><div class="circle-bg"></div></div>
-            <div class="circle"><div class="circle-bg"></div></div>
+            <div class="circle"><div class="circle-bg"></div></div> -->
         </div>
         <div id="status"></div>
 
@@ -81,6 +82,7 @@
           // TweenMax.to($('.circle-bg:even'), animTime, {rotation:-360, repeat:-1});
           // TweenMax.to($('.circle-bg:odd, #logo-circle'), animTime, {rotation:360, repeat:-1});
           TweenMax.to($('#logo-circle'), 60, {rotation:360, repeat:-1});
+          TweenMax.to($('#circles'), 600, {rotation:-360, repeat:-1});
         </script>
     </body>
 </html>

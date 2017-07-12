@@ -119,6 +119,17 @@
 		"oAP": "\/fonts\/smesmif-regular-webfont.woff2",
 		"oF": 0
 		},
+	"\/img\/circle-background.png": {
+		"ft": 32768,
+		"iS": 729335,
+		"oA": 0,
+		"oAP": "\/img\/circle-background.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/logo-circle-bordered-2.png": {
 		"ft": 32768,
 		"iS": 137203,
