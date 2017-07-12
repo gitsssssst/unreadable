@@ -52,8 +52,8 @@ html, body {
 
 #logo {
     position: absolute;
-    width: 260px;
-    height: 260px;
+    width: 310px;
+    height: 310px;
     z-index: 10;
     top: 50%;
     left: 50%;
@@ -79,7 +79,11 @@ html, body {
 }*/
 
 #circles {
-  // position: relative;
+  position: relative;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  transform: scale(1);
+  // transition: transform 0.5s;
 }
 
 .circle {
@@ -89,35 +93,35 @@ html, body {
 }
 
 .circle-bg {
-  background: transparent url(../img/logo-circle-bordered.png) no-repeat center center;
+  background: transparent url(../img/logo-circle-bordered-4.png) no-repeat center center;
   background-size: cover;
   position: absolute;
   top: 50%;
   left: 50%;
 }
 
+.circle:nth-of-type(1) .circle-bg {
+  @include circleSize(470px, rotating-ccw);
+}
+
 .circle:nth-of-type(2) .circle-bg {
-  @include circleSize(370px, rotating-ccw);
+  @include circleSize(705px);
+
 }
 
 .circle:nth-of-type(3) .circle-bg {
-  @include circleSize(500px);
-
+  @include circleSize(1056px, rotating-ccw);
 }
 
 .circle:nth-of-type(4) .circle-bg {
-  @include circleSize(700px, rotating-ccw);
+  @include circleSize(1584px);
 }
 
 .circle:nth-of-type(5) .circle-bg {
-  @include circleSize(980px);
-}
-
-.circle:nth-of-type(6) .circle-bg {
   @include circleSize(1360px, rotating-ccw);
 }
 
-.circle:nth-of-type(7) .circle-bg {
+.circle:nth-of-type(6) .circle-bg {
   @include circleSize(1780px);
 }
 
@@ -155,10 +159,10 @@ html, body {
 
 @-webkit-keyframes rotating /* Safari and Chrome */ {
   from {
-    transform: rotate(0deg) translate(-50%, -50%);
+    transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translate(-50%, -50%);
+    transform: rotate(360deg);
   }
 }
 @keyframes rotating {

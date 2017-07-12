@@ -31,8 +31,8 @@ html, body {
 
 #logo {
   position: absolute;
-  width: 260px;
-  height: 260px;
+  width: 310px;
+  height: 310px;
   z-index: 10;
   top: 50%;
   left: 50%;
@@ -54,54 +54,60 @@ html, body {
 /*#logo-sssssst {
     margin: 20px 50px 20px 20px;
 }*/
+#circles {
+  position: relative;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  transform: scale(1); }
+
 .circle {
   position: absolute;
   top: 50%;
   left: 50%; }
 
 .circle-bg {
-  background: transparent url(../img/logo-circle-bordered.png) no-repeat center center;
+  background: transparent url(../img/logo-circle-bordered-4.png) no-repeat center center;
   background-size: cover;
   position: absolute;
   top: 50%;
   left: 50%; }
 
-.circle:nth-of-type(2) .circle-bg {
-  width: 370px;
-  height: 370px;
-  margin-left: -185px;
-  margin-top: -185px;
+.circle:nth-of-type(1) .circle-bg {
+  width: 470px;
+  height: 470px;
+  margin-left: -235px;
+  margin-top: -235px;
   animation: rotating-ccw 600s linear infinite; }
+
+.circle:nth-of-type(2) .circle-bg {
+  width: 705px;
+  height: 705px;
+  margin-left: -352.5px;
+  margin-top: -352.5px;
+  animation: rotating 600s linear infinite; }
 
 .circle:nth-of-type(3) .circle-bg {
-  width: 500px;
-  height: 500px;
-  margin-left: -250px;
-  margin-top: -250px;
-  animation: rotating 600s linear infinite; }
-
-.circle:nth-of-type(4) .circle-bg {
-  width: 700px;
-  height: 700px;
-  margin-left: -350px;
-  margin-top: -350px;
+  width: 1056px;
+  height: 1056px;
+  margin-left: -528px;
+  margin-top: -528px;
   animation: rotating-ccw 600s linear infinite; }
 
-.circle:nth-of-type(5) .circle-bg {
-  width: 980px;
-  height: 980px;
-  margin-left: -490px;
-  margin-top: -490px;
+.circle:nth-of-type(4) .circle-bg {
+  width: 1584px;
+  height: 1584px;
+  margin-left: -792px;
+  margin-top: -792px;
   animation: rotating 600s linear infinite; }
 
-.circle:nth-of-type(6) .circle-bg {
+.circle:nth-of-type(5) .circle-bg {
   width: 1360px;
   height: 1360px;
   margin-left: -680px;
   margin-top: -680px;
   animation: rotating-ccw 600s linear infinite; }
 
-.circle:nth-of-type(7) .circle-bg {
+.circle:nth-of-type(6) .circle-bg {
   width: 1780px;
   height: 1780px;
   margin-left: -890px;
@@ -134,9 +140,9 @@ html, body {
 
 @-webkit-keyframes rotating /* Safari and Chrome */ {
   from {
-    transform: rotate(0deg) translate(-50%, -50%); }
+    transform: rotate(0deg); }
   to {
-    transform: rotate(360deg) translate(-50%, -50%); } }
+    transform: rotate(360deg); } }
 
 @keyframes rotating {
   from {
