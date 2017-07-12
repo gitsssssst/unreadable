@@ -23,9 +23,19 @@
                 var distance = baseDistance+perc*(maxDistance-baseDistance);
                 updateScale(distance);
             };
+
             function updateScale(distance) {
-                var scale = (distance/250);
-                document.getElementById("circles").style.transform = 'scale(-' + scale + ')';
+
+                // console.log(distance);
+
+                if(distance <= 145) {
+                    distance = 145;
+                } else if (distance >= 210) {
+                    distance = 210;
+                }
+
+                var scale = (distance/250)*1.5;
+                document.getElementById("circles").style.transform = 'scale(' + scale + ')';
             }
 
 
@@ -66,9 +76,9 @@
             }
           });
 
-          var animTime = 1200;
+          var animTime = 600;
           // var circleBg = document.getElementsByClassName("circle-bg");
-          TweenMax.to($('.circle-bg:even'), animTime, {rotation:-360, repeat:-1});
+          // TweenMax.to($('.circle-bg:even'), animTime, {rotation:-360, repeat:-1});
           TweenMax.to($('.circle-bg:odd, #logo-circle'), animTime, {rotation:360, repeat:-1});
         </script>
     </body>
