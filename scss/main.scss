@@ -14,7 +14,7 @@ $animationLength: 400s;
   margin-left: -$width/2;
   margin-top: -$width/2;
   // transform: translate(-50%, -50%);
-  animation: $animationDirection $animationLength linear infinite;
+  // animation: $animationDirection $animationLength linear infinite;
   transform: transale3d(0,0,0);
 }
 

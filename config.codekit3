@@ -238,6 +238,15 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/js\/TweenMax.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/TweenMax.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/node_modules": {
 		"ft": 65536,
 		"oA": 2,
