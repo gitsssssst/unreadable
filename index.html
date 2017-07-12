@@ -7,6 +7,27 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
 
+    </head>
+    <body>
+
+        <div id="logo">
+            <img id="logo-circle" src="img/logo-circle.svg">
+            <img id="logo-sssssst" src="img/logo-sssssst.svg">
+        </div>
+        <div id="circle-wrapper">
+        <div id="circles">
+<!--             <div class="circle"><div class="circle-bg"></div></div>
+            <div class="circle"><div class="circle-bg"></div></div>
+            <div class="circle"><div class="circle-bg"></div></div>
+            <div class="circle"><div class="circle-bg"></div></div> -->
+        </div>
+        </div>
+        <div id="status"></div>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.4/socket.io.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="js/TweenMax.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')</script>
         <script type="text/javascript">
             var host = window.document.location.host.replace(/:.*/, '');
             var ws = new WebSocket('ws://' + host + ':3000');
@@ -36,31 +57,13 @@
                 // }
 
                 var scale = (distance/250)*1.5;
-                document.getElementById("circles").style.transform = 'scale(' + scale + ')';
+                // document.getElementById("circles").style.transform = 'scale(' + scale + ')';
+                TweenMax.to($('#circles'), 0, {scale:scale, ease:Linear.easeNone});
+
             }
 
 
         </script>
-
-    </head>
-    <body>
-
-        <div id="logo">
-            <img id="logo-circle" src="img/logo-circle.svg">
-            <img id="logo-sssssst" src="img/logo-sssssst.svg">
-        </div>
-        <div id="circles">
-<!--             <div class="circle"><div class="circle-bg"></div></div>
-            <div class="circle"><div class="circle-bg"></div></div>
-            <div class="circle"><div class="circle-bg"></div></div>
-            <div class="circle"><div class="circle-bg"></div></div> -->
-        </div>
-        <div id="status"></div>
-
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.4/socket.io.min.js"></script>
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-        <script src="js/TweenMax.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')</script>
         <script type="text/javascript">
          var socket = io('https://woi.sssss.st');
           socket.on('presenceStatus', function (data) {
@@ -81,8 +84,8 @@
           // var circleBg = document.getElementsByClassName("circle-bg");
           // TweenMax.to($('.circle-bg:even'), animTime, {rotation:-360, repeat:-1});
           // TweenMax.to($('.circle-bg:odd, #logo-circle'), animTime, {rotation:360, repeat:-1});
-          TweenMax.to($('#logo-circle'), 60, {rotation:360, repeat:-1});
-          TweenMax.to($('#circles'), 600, {rotation:-360, repeat:-1});
+          TweenMax.to($('#logo-circle'), 600, {rotation:360, repeat:-1});
+          TweenMax.to($('#circle-wrapper'), 600, {rotation:-360, repeat:-1});
         </script>
     </body>
 </html>

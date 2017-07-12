@@ -53,8 +53,17 @@ html, body {
 /*#logo-sssssst {
     margin: 20px 50px 20px 20px;
 }*/
-#circles {
+#circle-wrapper {
   position: relative;
+  top: 50%;
+  left: 50%;
+  margin-top: -1500px;
+  margin-left: -1500px;
+  width: 3000px;
+  height: 3000px; }
+
+#circles {
+  position: absolute;
   top: 50%;
   left: 50%;
   margin-top: -1500px;
