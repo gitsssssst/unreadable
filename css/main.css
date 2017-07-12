@@ -31,8 +31,8 @@ html, body {
 
 #logo {
   position: absolute;
-  width: 270px;
-  height: 270px;
+  width: 260px;
+  height: 260px;
   z-index: 10;
   top: 50%;
   left: 50%;
@@ -67,39 +67,46 @@ html, body {
   left: 50%; }
 
 .circle:nth-of-type(2) .circle-bg {
-  width: 400px;
-  height: 400px;
-  margin-left: -200px;
-  margin-top: -200px;
+  width: 370px;
+  height: 370px;
+  margin-left: -185px;
+  margin-top: -185px;
   animation: rotating-ccw 120s linear infinite; }
 
 .circle:nth-of-type(3) .circle-bg {
-  width: 550px;
-  height: 550px;
-  margin-left: -275px;
-  margin-top: -275px;
+  width: 500px;
+  height: 500px;
+  margin-left: -250px;
+  margin-top: -250px;
   animation: rotating 120s linear infinite; }
 
 .circle:nth-of-type(4) .circle-bg {
-  width: 750px;
-  height: 750px;
-  margin-left: -375px;
-  margin-top: -375px;
+  width: 700px;
+  height: 700px;
+  margin-left: -350px;
+  margin-top: -350px;
   animation: rotating-ccw 120s linear infinite; }
 
 .circle:nth-of-type(5) .circle-bg {
-  width: 1000px;
-  height: 1000px;
-  margin-left: -500px;
-  margin-top: -500px;
+  width: 980px;
+  height: 980px;
+  margin-left: -490px;
+  margin-top: -490px;
   animation: rotating 120s linear infinite; }
 
 .circle:nth-of-type(6) .circle-bg {
-  width: 1300px;
-  height: 1300px;
-  margin-left: -650px;
-  margin-top: -650px;
+  width: 1360px;
+  height: 1360px;
+  margin-left: -680px;
+  margin-top: -680px;
   animation: rotating-ccw 120s linear infinite; }
+
+.circle:nth-of-type(7) .circle-bg {
+  width: 1780px;
+  height: 1780px;
+  margin-left: -890px;
+  margin-top: -890px;
+  animation: rotating 120s linear infinite; }
 
 #footer {
   color: black;
