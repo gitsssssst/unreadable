@@ -49,7 +49,7 @@ html, body {
 #logo-circle {
   /*  -webkit-animation: rotating 2s linear infinite;
 */
-  animation: rotating 60s linear infinite; }
+  animation: rotating 120s linear infinite; }
 
 /*#logo-sssssst {
     margin: 20px 50px 20px 20px;
@@ -57,46 +57,49 @@ html, body {
 .circle {
   position: absolute;
   top: 50%;
-  left: 50%;
-  width: 200px;
-  height: 200px;
-  transform: translate(-50%, -50%);
-  background: transparent url(../img/logo-circle-bordered.png) no-repeat center center;
-  background-size: cover; }
+  left: 50%; }
 
-.circle:nth-of-type(2) {
+.circle-bg {
+  background: transparent url(../img/logo-circle-bordered.png) no-repeat center center;
+  background-size: cover;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 50%; }
+
+.circle:nth-of-type(2) .circle-bg {
   width: 400px;
   height: 400px;
-  transform: translate(-50%, -50%);
-  animation: rotating-ccw 60s linear infinite; }
+  margin-left: -200px;
+  margin-top: -200px;
+  animation: rotating-ccw 120s linear infinite; }
 
-.circle:nth-of-type(3) {
+.circle:nth-of-type(3) .circle-bg {
   width: 550px;
   height: 550px;
-  animation: rotating 60s linear infinite; }
+  margin-left: -275px;
+  margin-top: -275px;
+  animation: rotating 120s linear infinite; }
 
-.circle:nth-of-type(4) {
+.circle:nth-of-type(4) .circle-bg {
   width: 750px;
   height: 750px;
-  animation: rotating-ccw 60s linear infinite; }
+  margin-left: -375px;
+  margin-top: -375px;
+  animation: rotating-ccw 120s linear infinite; }
 
-.circle:nth-of-type(5) {
+.circle:nth-of-type(5) .circle-bg {
   width: 1000px;
   height: 1000px;
-  animation: rotating 60s linear infinite; }
+  margin-left: -500px;
+  margin-top: -500px;
+  animation: rotating 120s linear infinite; }
 
-.circle:nth-of-type(6) {
+.circle:nth-of-type(6) .circle-bg {
   width: 1300px;
   height: 1300px;
-  animation: rotating-ccw 60s linear infinite; }
-
-.circle:nth-of-type(7) {
-  width: 1680px;
-  height: 1680px;
-  animation: rotating 60s linear infinite; }
+  margin-left: -650px;
+  margin-top: -650px;
+  animation: rotating-ccw 120s linear infinite; }
 
 #footer {
   color: black;
@@ -124,9 +127,9 @@ html, body {
 
 @-webkit-keyframes rotating /* Safari and Chrome */ {
   from {
-    transform: rotate(0deg); }
+    transform: rotate(0deg) translate(-50%, -50%); }
   to {
-    transform: rotate(360deg); } }
+    transform: rotate(360deg) translate(-50%, -50%); } }
 
 @keyframes rotating {
   from {

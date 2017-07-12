@@ -6,6 +6,17 @@ $green: #00FF28;
 $red: #FF000A;
 $darkblue: #000028;
 
+$animationLength: 120s;
+
+@mixin circleSize($width: 200px, $animationDirection: rotating) {
+  width: $width;
+  height: $width;
+  margin-left: -$width/2;
+  margin-top: -$width/2;
+  // transform: translate(-50%, -50%);
+  animation: $animationDirection $animationLength linear infinite;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -60,60 +71,51 @@ html, body {
 
 #logo-circle {
 /*  -webkit-animation: rotating 2s linear infinite;
-*/  animation: rotating 60s linear infinite;
+*/  animation: rotating $animationLength linear infinite;
 }
 
 /*#logo-sssssst {
     margin: 20px 50px 20px 20px;
 }*/
 
+#circles {
+  // position: relative;
+}
+
 .circle {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 200px;
-  height: 200px;
-  transform: translate(-50%, -50%);
-  background: transparent url(../img/logo-circle-bordered.png) no-repeat center center;
-  background-size: cover;
 }
 
-.circle:nth-of-type(2) {
+.circle-bg {
+  background: transparent url(../img/logo-circle-bordered.png) no-repeat center center;
+  background-size: cover;
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 400px;
-  height: 400px;
-  transform: translate(-50%, -50%);
-  animation: rotating-ccw 60s linear infinite;
 }
 
-.circle:nth-of-type(3) {
-  width: 550px;
-  height: 550px;
-  animation: rotating 60s linear infinite;
+.circle:nth-of-type(2) .circle-bg {
+  @include circleSize(400px, rotating-ccw);
 }
 
-.circle:nth-of-type(4) {
-  width: 750px;
-  height: 750px;
-  animation: rotating-ccw 60s linear infinite;
+.circle:nth-of-type(3) .circle-bg {
+  @include circleSize(550px);
+
 }
 
-.circle:nth-of-type(5) {
-  width: 1000px;
-  height: 1000px;
-  animation: rotating 60s linear infinite;
+.circle:nth-of-type(4) .circle-bg {
+  @include circleSize(750px, rotating-ccw);
+
 }
-.circle:nth-of-type(6) {
-  width: 1300px;
-  height: 1300px;
-  animation: rotating-ccw 60s linear infinite;
+
+.circle:nth-of-type(5) .circle-bg {
+  @include circleSize(1000px);
 }
-.circle:nth-of-type(7) {
-  width: 1680px;
-  height: 1680px;
-  animation: rotating 60s linear infinite;
+
+.circle:nth-of-type(6) .circle-bg {
+  @include circleSize(1300px, rotating-ccw);
 }
 
 #footer {
@@ -150,10 +152,10 @@ html, body {
 
 @-webkit-keyframes rotating /* Safari and Chrome */ {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg) translate(-50%, -50%);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg) translate(-50%, -50%);
   }
 }
 @keyframes rotating {
